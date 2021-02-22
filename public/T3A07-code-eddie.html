@@ -1,3 +1,4 @@
+  
 <script>
 function myHitOther(my1,my2){
    left1   = parseInt(document.getElementById(my1).style.left)
@@ -25,24 +26,21 @@ function myHitOther(my1,my2){
 
 What we are going to do is take CSS positioning and Forms button and make something that moves across the screen.<br>
 
-<input type=button value="Move 10 pixels right" onClick="{
- //alert(   parseInt(document.getElementById('mySpan01').style.left))
 
+<input type=button value="➡" onClick="{
+ //alert(   parseInt(document.getElementById('mySpan01').style.left))
 document.getElementById('mySpan01').style.left = 
    parseInt(document.getElementById('mySpan01').style.left) +10
+
+
 
 if(myHitOther('mySpan01', 'mySpan02')){
   // alert('hit')
    document.getElementById('mySpan02').style.left = '-400px'
 }
-
 }">
 
-<span id="mySpan01" style="position:absolute; left:100; top:150; width:45; height:30"> span 1</span><br>
-<span id="mySpan02" style="position:absolute; left:200; top:150; width:45; height:30"> span 2</span><br>
-
-
-
-
+<span id="mySpan01" style="position:absolute; left:0; top:150; width:45; height:30"> <img src="https://i.pinimg.com/originals/b6/90/40/b69040ba12c1b3a9d9d998e3e67154e9.gif"></span><br>
+<span id="mySpan02" style="position:absolute; left:200; top:150; width:45; height:30"> <img src="https://www.mariowiki.com/images/thumb/8/8a/New_Super_Mario_Bros._U_Deluxe_Super_Star.png/1200px-New_Super_Mario_Bros._U_Deluxe_Super_Star.png"style="position:absolute; left:200; top:150; width:100; height:100"></span><br>
 
 
