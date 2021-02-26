@@ -1,0 +1,118 @@
+<script>
+function myHitOther(my1,my2,my3){
+   left1   = parseInt(document.getElementById(my1).style.left)
+   right1  = left1 + parseInt(document.getElementById(my1).style.width)
+   top1    = parseInt(document.getElementById(my1).style.top)   
+   bottom1 = top1   + parseInt(document.getElementById(my1).style.height)
+   left2   = parseInt(document.getElementById(my2).style.left)
+   right2  = left2 + parseInt(document.getElementById(my2).style.width)
+   top2    = parseInt(document.getElementById(my2).style.top)   
+   bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
+
+   if ((right1  >=  left2  ) &&      	   
+       (bottom1 >=  top2   ) &&
+       (left1   <=  right2 ) &&
+       (top1    <=  bottom2)
+       
+ ){
+       return true
+   }
+}
+
+</script>
+
+
+
+
+
+<p style="color=white"><h1 align=center>T3A07-code-eddie.html</h1></p>
+
+<p style="color: white"> What we are going to do is take CSS positioning and Forms button and make something that moves across the screen.</p><br>
+
+
+
+<input type=button value="Right" onClick="{
+ //alert(   parseInt(document.getElementById('mySpan01').style.left))
+document.getElementById('mySpan01').style.left = 
+   parseInt(document.getElementById('mySpan01').style.left) +10 
+
+
+if(myHitOther('mySpan01', 'mySpan02')){
+   //alert('hit')
+   document.getElementById('mySpan02').style.left = '-400px'
+
+
+}
+}">
+
+
+
+<input type=button value="Left" onClick="{
+ //alert(   parseInt(document.getElementById('mySpan01').style.left))
+document.getElementById('mySpan01').style.left = 
+   parseInt(document.getElementById('mySpan01').style.left) -10 
+
+if(myHitOther('mySpan01', 'mySpan02')){
+  // alert('hit')
+   document.getElementById('mySpan02').style.top = '-400px'
+
+}
+}">
+
+<input type=button value="Up" onClick="{
+ //alert(   parseInt(document.getElementById('mySpan01').style.left))
+document.getElementById('mySpan01').style.top = 
+   parseInt(document.getElementById('mySpan01').style.top) -10 
+if(myHitOther('mySpan01', 'mySpan02')){
+  // alert('hit')
+   document.getElementById('mySpan02').style.top = '-400px'
+
+}
+}">
+
+<input type=button value="Down" onClick="{
+ //alert(   parseInt(document.getElementById('mySpan01').style.left))
+document.getElementById('mySpan01').style.top = 
+   parseInt(document.getElementById('mySpan01').style.top) +10 
+
+
+if(myHitOther('mySpan01', 'mySpan02')){
+  // alert('hit')
+   document.getElementById('mySpan02').style.top = '-400px'
+
+}
+}">
+
+
+
+
+
+
+<!Doctype Html>
+<Html>   
+<Head> 
+<Title>   
+Add the Background image using background attribute 
+</Title>
+</Head>
+<Body background="https://www.tynker.com/projects/images/7819348082902d48e7885a800529f8c4012d01c5/background-scene---super-mario-galaxy-background.png"> 
+</Body>
+</Html>
+
+
+
+
+
+
+
+<span id="mySpan01" style="position:absolute; left:0; top:150; width:45; height:30"> <img src="https://i.pinimg.com/originals/b6/90/40/b69040ba12c1b3a9d9d998e3e67154e9.gif"></span><br>
+<span id="mySpan02" style="position:absolute; left:250; top:250; width:100; height:100"> <img src="https://www.mariowiki.com/images/thumb/8/8a/New_Super_Mario_Bros._U_Deluxe_Super_Star.png/1200px-New_Super_Mario_Bros._U_Deluxe_Super_Star.png"style="position:absolute; left:250; top: 250; width:100; height:100"></span><br>
+
+
+
+
+
+
+
+
+
