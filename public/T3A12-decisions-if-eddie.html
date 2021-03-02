@@ -1,0 +1,157 @@
+<h1 align=center>T3A12-Decisoins-if-Eddie.html</h1>
+
+<pre>
+|| means OR
+&& means AND
+! means NOT
+</pre><br>
+
+<input id="myText01" type=text value=3 ><br><br>
+<input type=button value="Show X" onclick="{
+   x = document.getElementById('myText01').value
+   myTemp = '..........'
+   if (x >= 2){myTemp = 'Something'}
+   document.getElementById('mySpan01').innerHTML = myTemp
+
+}"><br><br>
+
+<span id="mySpan01">...</span><br><br>
+
+
+<input id="myText02a" type=text value=3 >
+<input id="myText02b" type=text value=-7 ><br>
+<input type=button value="Decide x and y" onclick="{
+   myX = document.getElementById('myText02a').value
+   myY = document.getElementById('myText02b').value
+   myTemp = '.........'
+   if (myX > 2 && myY < -4){
+      myTemp = 'x greater than 2 and y less than -4'
+   } else {
+      myTemp = 'not'
+   }
+   document.getElementById('mySpan02').innerHTML = myTemp
+
+}"><br>
+<span id="mySpan02">...</span><br><br>
+
+
+What number am I thinking of?<br>
+<input id="myText03" type=text value='0' ><br><br>
+<input type=button value="Guess" onclick="{
+   x = document.getElementById('myText03').value
+   myTemp = 'Bingo!'
+   if (x >1334){myTemp = 'Lower'}    
+   if (x <1334){myTemp = 'Higher'}
+      
+   document.getElementById('mySpan03').innerHTML = myTemp
+
+   
+   
+
+}"><br><br>
+
+<span id="mySpan03">...</span><br><br>
+
+
+
+<br>
+
+What's your favourite number?(Hint: mine is 24)<br>
+<input id="myText04" type=text value=0 ><br><br>
+<input type=button value="Guess" onclick="{
+   x = document.getElementById('myText04').value
+   myTemp = 'Mine too!'
+   if (x!=24){myTemp = 'Oh really'}    
+      
+   document.getElementById('mySpan04').innerHTML = myTemp
+
+   
+   
+
+}"><br><br>
+
+
+<span id="mySpan04">...</span><br><br>
+
+
+
+
+Have you ever broken a bone?(Answer with yes or no)<br>
+<input id="myText05" type=text value='no' ><br><br>
+<input type=button value="Click" onclick="{
+   x = document.getElementById('myText05').value
+   myTemp = '...'
+   if (x='yes'){myTemp = 'Ouch!'}  
+   else {
+      myTemp = 'Me neither'
+   }  
+   
+      
+   
+
+document.getElementById('mySpan05').innerHTML = myTemp
+
+   
+   
+
+}"><br><br>
+
+
+<span id="mySpan05">...</span><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+World's worst calculator! <br>
+
+<input id="myText06a" type=text value=1 >+
+<input id="myText06b" type=text value=2 ><br>
+<input type=button value="Add x and y" onclick="{
+   myX = document.getElementById('myText06a').value
+   myY = document.getElementById('myText06b').value
+   myTemp = '.........'
+   if (myX = 1 && myY = 1 ){
+      myTemp =2
+   } else {
+      myTemp = 'Not 1+1. Cannot compute.'
+   }
+   document.getElementById('mySpan06').innerHTML = myTemp
+
+}"><br>
+<span id="mySpan06">...</span><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
