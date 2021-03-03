@@ -81,7 +81,7 @@ Have you ever broken a bone?(Answer with yes or no)<br>
 <input type=button value="Click" onclick="{
    x = document.getElementById('myText05').value
    myTemp = '...'
-   if (x='yes'){myTemp = 'Ouch!'}  
+   if (x=='yes'){myTemp = 'Ouch!'}  
    else {
       myTemp = 'Me neither'
    }  
@@ -102,29 +102,15 @@ document.getElementById('mySpan05').innerHTML = myTemp
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-World's worst calculator! <br>
+World's worst calculator!(Can only do 1+1) <br>
 
 <input id="myText06a" type=text value=1 >+
-<input id="myText06b" type=text value=2 ><br>
+<input id="myText06b" type=text value=1 ><br>
 <input type=button value="Add x and y" onclick="{
    myX = document.getElementById('myText06a').value
    myY = document.getElementById('myText06b').value
    myTemp = '.........'
-   if (myX = 1 && myY = 1 ){
+   if (myX == 1 && myY == 1 ){
       myTemp =2
    } else {
       myTemp = 'Not 1+1. Cannot compute.'
@@ -133,6 +119,61 @@ World's worst calculator! <br>
 
 }"><br>
 <span id="mySpan06">...</span><br><br>
+
+
+See your Fortune!(Put in numbers 1,2,3 or 4)<br>
+
+<input id="myText07a" type=text value=1 > and
+<input id="myText07b" type=text value=1 ><br>
+<input type=button value="Click" onclick="{
+   myX = document.getElementById('myText07a').value
+   myY = document.getElementById('myText07b').value
+   myTemp = '.........'
+   if (myX == 1 || myY == 2 ){
+      myTemp = 'You are blessed!'
+   } else {
+      myTemp = 'You are cursed!'
+   }
+   document.getElementById('mySpan07').innerHTML = myTemp
+
+}"><br>
+<span id="mySpan07">...</span><br><br>
+
+
+
+Do you wish to leave this website?(Answer with yes or no)<br>
+<input id="myText08" type=text value='no' ><br><br>
+<input type=button value="Click" onclick="{
+   x = document.getElementById('myText08').value
+   myTemp = '...'
+   if (x=='yes'){myTemp ='Scroll to the bottom'}  
+   else {
+      myTemp = 'Ok sounds good to me!'
+   }  
+    document.getElementById('mySpan08').innerHTML = myTemp
+
+}"><br>
+<span id="mySpan08">...</span><br><br>
+      
+  	
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<input type="button" value="Close this window" onclick="self.close()">
+
+
+<!DOCTYPE html>
+<html>
+<body style="background-color:powderblue;">
+
+</body>
+</html>
+
+
+
+
+
+
+
 
 
 
