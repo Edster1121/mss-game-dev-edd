@@ -12,7 +12,7 @@
      }
 }">
 
->h1 align=center>T3A09-events-fred</h1>
+<h1 align=center>T3A09-events-fred</h1>
 Output span: <span id="mySpan01">...</span><br><br>
 
 Traditional onclick event: <input type=button value="onclick event" onclick="{
@@ -26,3 +26,237 @@ This is <b onMouseOver="{
 }"> bold and onMouseOver </b> this isn't <br><br>
 
 </body>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: #92a8d1;
+}
+</style>
+</head>
+<body>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: lightblue;
+}
+</style>
+</head>
+<body>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction12() {
+  var x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+</script>
+</head>
+<body>
+
+Enter your name: <input type="text" id="fname" onblur="myFunction12()">
+
+<p>When leaving input field, the letters are changed to uppercase (onblur)</p>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction1(x) {
+  x.style.background = "yellow";
+}
+</script>
+</head>
+<body>
+
+Enter your name: <input type="text" onfocus="myFunction1(this)">
+
+<p>When the input field gets focus, the background turns yellow (onfocus)</p>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function writeMessage() {
+  document.forms[0].mySecondInput.value = document.forms[0].myInput.value;
+}
+</script>
+</head>
+<body>
+
+
+<form>
+  Enter your name:
+  <input type="text" name="myInput" onkeyup="writeMessage()" size="20">
+  <input type="text" name="mySecondInput" size="20">
+</form>
+<p>The text copies your typing to the other box. (onkeyup)</p>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction3(e) {
+  x = e.clientX;
+  y = e.clientY;
+  coor = "Coordinates: (" + x + "," + y + ")";
+  document.getElementById("demo").innerHTML = coor
+}
+
+function clearCoor() {
+  document.getElementById("demo").innerHTML = "";
+}
+</script>
+</head>
+<body style="margin:0px;">
+
+<div id="coordiv" style="width:199px;height:99px;border:1px solid" onmousemove="myFunction3(event)" onmouseout="clearCoor()"></div>
+
+<p>Mouse over the rectangle above, and get the coordinates of your mouse pointer.(onmousemove)</p>
+
+<p id="demo"></p>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction4() {
+  document.getElementById("demo1").innerHTML = "Hello!";
+}
+</script>
+</head>
+<body>
+
+<p ondblclick="myFunction4()">Doubleclick this paragraph to trigger a function. (ondblclick)</p>
+
+<p id="demo1"></p>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction() {
+  var w = window.outerWidth;
+  var h = window.outerHeight;
+  var txt = "Window size: width=" + w + ", height=" + h;
+  document.getElementById("fun").innerHTML = txt;
+}
+</script>
+</head>
+
+<body onresize="myFunction()">
+
+<p>Try to resize the browser window.</p>
+
+<p id="fun"> </p>
+
+<p>(onresize)</p>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction6() {
+  alert("Page is loaded");
+}
+</script>
+</head>
+
+<body onload="myFunction6()">
+</body>
+
+</html>
+
+(onload was the alert at the start)<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
