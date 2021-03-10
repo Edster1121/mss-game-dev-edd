@@ -1,0 +1,71 @@
+<h1 align=center> T3A13-functions-eddie.html </h1>
+<h3> Version number: 1.3.5 </h3>
+
+<script>
+function myBasicFun(){
+   document.getElementById('mySpan01').innerHTML = "wow"
+}
+function myAdvancedFun(x,y){
+   return x*y
+}
+
+</script>
+
+<input id="myText01" type=text value=3 ><br><br>
+<input type=button value="Run function" onclick="{
+   //alert('button works')
+   myBasicFun()
+}"><br><br>
+<input type=button value="Advanced" onclick="{
+   document.getElementById('mySpan01').innerHTML = myAdvancedFun(3,2)
+}"><br><br>
+<span id="mySpan01">...</Span><br><br>
+
+
+<input id="myText02" type=text value=3 ><br><br>
+<input type=button value="3 x 15" onclick="{
+   document.getElementById('mySpan02').innerHTML = myAdvancedFun(3,15)
+}"><br><br>
+<span id="mySpan02">...</Span><br><br>
+
+
+<input id="myText03" type=text value=3 ><br><br>
+<input type=button value=Convert onclick="{
+   document.getElementById('mySpan03').innerHTML = myAdvancedFun ( 2,1.8)
+}"><br><br>
+<span id="mySpan03">...</Span><br><br>
+
+<input id="myText04" type=text value=3 ><br><br>
+<input type=button value=Change onclick="{
+   document.getElementById('mySpan04').innerHTML = myAdvancedFun ( 212,1.8)
+}"><br><br>
+<span id="mySpan04">...</Span><br><br>
+
+<input id="myText05" type=text value=3 ><br><br>
+<input type=button value=multiply onclick="{
+   document.getElementById('mySpan05').innerHTML = myAdvancedFun ( 3222,1.8)
+}"><br><br>
+<span id="mySpan05">...</Span><br><br>
+
+<input id="myText06" type=text value=3 ><br><br>
+<input type=button value=Calculate onclick="{
+   document.getElementById('mySpan06').innerHTML = myAdvancedFun ( 124322,1.8)
+}"><br><br>
+<span id="mySpan06">...</Span><br><br>
+
+<input id="myText07" type=text value=3 ><br><br>
+<input type=button value=Click onclick="{
+   document.getElementById('mySpan07').innerHTML = myAdvancedFun ( 24322,1.8)
+}"><br><br>
+<span id="mySpan07">...</Span><br><br>
+
+<input id="myText08" type=text value=3 ><br><br>
+<input type=button value='Big Number' onclick="{
+   document.getElementById('mySpan08').innerHTML = myAdvancedFun ( 214342,1.8)
+}"><br><br>
+<span id="mySpan08">...</Span><br><br>
+
+
+
+
+
