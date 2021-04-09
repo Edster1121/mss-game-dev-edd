@@ -1,8 +1,14 @@
 Version 0.0.1
 <script> let mySound1 = new Audio ('A1.m4a') </script>
+<script> let mySound2 = new Audio ('Patrick Burp.m4a') </script>
+<script> let mySound3 = new Audio ('Arpeggios.m4a') </script>
+<script> let mySound4 = new Audio ('Epic Beat Boxing.m4a') </script>
+<script> let mySound5 = new Audio ('Down.m4a') </script>
+<script> let mySound6 = new Audio ('Up.m4a') </script>
+<script> let mySound7 = new Audio ('Out.m4a') </script>
 
 <h1 align=center>T3A18-Sounds-and-events-name.html</h1>
-
+<body style="background-color:black;color:white;">
 
 
 <b onClick="{
@@ -12,32 +18,59 @@ This is bold<br>and several<br> lines<br> Click it to hear a sound!</b>
 
 <br>
 
-Change the following: <input type=text value=5 onChange="{
-   alert('Value changed to: '+this.value)
+Change the following to hear a gross sound: <input type=text value=5 onChange="{
+   mySound2.play() 
 }">
 <br><br>
 
-<b> Onload </b>
 
-<body onload="myFunction0()">
+Double click the following: <img src="https://fiverr-res.cloudinary.com/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/138833134/original/50f888187bf2802af1829bf48f0d8702b90746c9.jpg" 
+width="100" height="100"
+ onDblClick="{
+   mySound3.play() 
+}">
+<br><br>
 
-<script>
-function myFuncition0() {
-   alert("Page is loaded");
-}
-</script>
+Hover over the image (onMouseOver): <img src="https://st2.depositphotos.com/1007566/7855/v/600/depositphotos_78559212-stock-illustration-music-online.jpg" 
+width="100" height="100"
+ onMouseOver="{
+   mySound4.play() 
+}">
+<br><br>
 
-<b> On KeyDown</b>
-<input type="text" onkeydown="myFunciton1()">
+Press a key in the text box!(onkeydown): <input type=text value=5 onkeydown="{
+   mySound5.play() 
+}">
+<br><br>
 
-<script>
-function myFunction1() {
-  alert("You pressed a key inside the input field");
-}
-</script>
-<br><br<
 
-<b>OnMouseOVer</b> 
+Let go a key in the text box!(onkeyup): <input type=text value=5 onkeyup="{
+   mySound6.play() 
+}">
+<br><br>
+
+
+Move your cursor out of the text box!(onMouseout): <input type=text value=5 onMouseout="{
+   mySound7.play() 
+}">
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -59,11 +92,9 @@ function myFunction1() {
 
 <ul>Other events you could use on any web page tag:
 <li><font color="green">onClick</font>
-<li>onMouseScroll
-<li>onDblClick
-<li>onMouseOver
 <li><font color="green">onChange</font>
-<li>onload
-<li>onkeydown
-<li>onMouseover
-<li>onMouseout
+<li><font color="green">onDblClick</font>
+<li><font color="green">onMouseOver</font>
+<li><font color="green">onkeydown</font>
+<li><font color="green">onkeyup</font>
+<li><font color="green">onMouseout</font>
