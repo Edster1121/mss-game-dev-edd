@@ -1,0 +1,119 @@
+Version 1.3.10<br>
+<h1 align=center>T3A15-arrays-eddie.html</h1>
+
+
+<input id="myText04" type=text value=1 ><br><br>
+
+<input type=button value="Make and Show Array" onclick="{
+   document.myArray = new Array()
+   document.myArray [0] = 7;
+   document.myArray [1] = 8;
+   document.myArray [2] = 9;
+
+   document.getElementById('mySpan04').innerHTML = '[1] value is '+document.myArray[1]
+}"><br><br>
+
+<input type=button value="Loop Through Array" onclick="{
+   myTemp = ''
+   for (i=0;  i<3;  i++){
+    myTemp += 'Array value: ' + i + ', is: '+ document.myArray[i] + '<br>'
+   }
+   document.getElementById('mySpan04').innerHTML = myTemp
+}"><br><br>
+
+<span id="mySpan04" >...</Span><br><br>
+
+
+<b>You can change the Values of these arrays!</b><br><br>
+
+First Array <input id="myText01" type=text value=1 ><br><br>
+
+Second Array <input id="myText02" type=text value=2 ><br><br>
+
+Third Array <input id="myText03" type=text value=3 ><br><br>
+
+<input type=button value="Make and Show Array" onclick="{
+   document.myArray = new Array()
+   document.myArray [0] = document.getElementById('myText01').value;
+   document.myArray [1] = document.getElementById('myText02').value;
+   document.myArray [2] = document.getElementById('myText03').value;
+
+   document.getElementById('mySpan01').innerHTML = '[1] value is '+document.myArray[1]
+}"><br><br>
+
+<input type=button value="Loop Through Array" onclick="{
+   myTemp = ''
+   for (i=0;  i<3;  i++){
+    myTemp += 'Array value: ' + i + ', is: '+ document.myArray[i] + '<br>'
+   }
+   document.getElementById('mySpan01').innerHTML = myTemp
+}"><br><br>
+
+<span id="mySpan01" >...</Span><br><br>
+
+
+
+
+
+<b>Pet Simulator!</b><br><br>
+
+Dog's Name <input id="myText07" type=text value="Woof" ><br><br>
+
+Cat's Name <input id="myText08" type=text value="Meow" ><br><br>
+
+Hamster's Name <input id="myText09" type=text value="Peep" ><br><br>
+
+<input type=button value="Activate!" onclick="{
+   document.myArray = new Array()
+   document.myArray [7] = document.getElementById('myText07').value;
+   document.myArray [8] = document.getElementById('myText08').value;
+   document.myArray [9] = document.getElementById('myText09').value;
+
+   document.getElementById('mySpan02').innerHTML = '[1] ' +document.myArray[7] + ' loves you and barks affectionately.'
+
+document.getElementById('mySpan03').innerHTML = '[2] ' +document.myArray[8] + ' loves you and purrs affectionately.'
+
+document.getElementById('mySpan05').innerHTML = '[3] ' +document.myArray[9] + ' loves you and spins on its wheel affectionately.'
+
+
+
+
+
+}"><br><br>
+
+
+
+<span id="mySpan02" >...</Span><br><br>            
+<span id="mySpan03" >...</Span><br><br>
+<span id="mySpan05" >...</Span><br><br>
+
+
+
+<img src="https://dogtime.com/assets/uploads/2018/10/puppies-cover.jpg"
+   width=150px
+   height=100px
+>
+
+<img src="https://blog.soundcloud.com/wp-content/uploads/2011/11/kitten.jpg"
+   width=150px
+   height=100px
+>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Phodopus_sungorus_-_Hamsterkraftwerk.jpg"
+   width=150px
+   height=100px
+>
+
+
+<!DOCTYPE html>
+<html>
+<body style="background-color:powderblue;">
+
+</body>
+</html>
+
+
+
+
+
+
