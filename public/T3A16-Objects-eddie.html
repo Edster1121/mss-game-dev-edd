@@ -1,0 +1,92 @@
+Version 0.1.6
+
+<h1 align=center>T3A16-Objects-eddie.html</h1>
+
+<h3><b> Make Your Own Mad Lib </h3></b>
+
+<img src="https://www.madlibs.com/wp-content/themes/madlibs/dist/images/intro_logo.png"
+ width=150px
+ height=100px
+
+><br><br>
+
+Enter a name into the object: <input id="myText01" type=text value="Fred" ><br><br>                   
+
+Enter an age into the object: <input id="myText02" type=text value=20 ><br><br>
+
+Enter a noun into the object: <input id="myText03" type=text value="rock" ><br><br>
+
+Enter a body part into the object: <input id="myText04" type=text value="head" ><br><br>
+
+Enter an adjective into the object: <input id="myText05" type=text value="sad" ><br><br>
+
+Enter a verb into the object: <input id="myText06" type=text value="cried"><br><br>
+
+Enter a person into the object: <input id="myText07" type=text value="mom" ><br><br>
+
+Enter an emotion into the object: <input id="myText08" type=text value="happy" ><br><br>
+
+<input type=button value="Make and Show Object" onclick="{
+   let myObject = {   
+         'firstName': document.getElementById('myText01').value,
+         'age': document.getElementById('myText02').value,
+         'noun': document.getElementById('myText03').value,
+         'bodyPart': document.getElementById('myText04').value,
+         'adjective': document.getElementById('myText05').value,
+         'verb': document.getElementById('myText06').value,
+         'person': document.getElementById('myText07').value,
+         'emotion': document.getElementById('myText08').value
+     }
+
+document.getElementById('mySpan01').innerHTML = myObject.firstName
+
+document.getElementById('mySpan02').innerHTML = myObject.age
+
+document.getElementById('mySpan03').innerHTML = myObject.noun
+
+document.getElementById('mySpan04').innerHTML = myObject.bodyPart
+
+document.getElementById('mySpan05').innerHTML = myObject.adjective
+
+document.getElementById('mySpan06').innerHTML = myObject.verb
+
+document.getElementById('mySpan07').innerHTML = myObject.person
+
+document.getElementById('mySpan08').innerHTML = myObject.emotion
+
+
+}"><br><br>
+
+There once was a boy named <span id="mySpan01">...</span>.<br><br> 
+
+He was <span id="mySpan02">...</span> years old<br><br> 
+
+He fell onto a <span id="mySpan03">...</span>.<br><br> 
+
+He hurt his <span id="mySpan04">...</span>.<br><br> 
+
+He became very <span id="mySpan05">...</span>.<br><br> 
+
+He <span id="mySpan06">...</span> back home.<br><br> 
+
+He went to see his <span id="mySpan07">...</span>.<br><br> 
+
+Then he became <span id="mySpan08">...</span>.<br><br> 
+
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>HTML Backgorund Color</title>
+   </head>
+   <body style="background-color:beige;">
+   </body>
+</html>
+
+
+
+
+
+
+
+
