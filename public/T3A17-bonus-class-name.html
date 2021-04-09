@@ -1,0 +1,49 @@
+Version 0.0.1
+<h1 align=center>T3A17-bonus-class-name</h1>
+
+Enter a name into the class: <input id="myText01" type=text value=17 ><br><br>
+Enter an age into the class: <input id="myText02" type=text value="Fluffy" ><br><br>
+Enter the species into the class: <input id="myText03" type=text value="sheep" ><br><br>
+
+<input id="myButton131" type="button" value="Make a class myAnimal and run the method myShow()" onclick="{
+
+class myAnimal {
+    constructor(passName, passAge, passSpecies) {
+       this.myName = passName;
+       this.myAge = passAge;
+       this.mySpecies = passSpecies
+    }
+    myShow(){
+       document.getElementById('myDiv131').innerHTML = 'Hello, ' + this.myName  + ' ' +  this.myAge  + ' year old' + ' ' + this.mySpecies
+    }
+ }  // end class myAnimal
+                                                                                              
+   myPet = new myAnimal(document.getElementById('myText02').value, document.getElementById('myText01').value,document.getElementById('myText03').value )
+   myPet.myShow() 
+
+                                                                          
+
+
+
+}"><br><br>
+
+<div id='myDiv131' style="color:white";>...</div><br>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body  {
+  background-image: url("https://animals.sandiegozoo.org/sites/default/files/2016-09/regions_hero_northamerica_1.jpg");
+  background-color: #cccccc;
+}
+</style>
+</head>
+<body>
+
+
+</body>
+</html>
+
+
