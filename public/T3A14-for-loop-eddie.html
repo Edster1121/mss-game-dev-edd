@@ -1,23 +1,24 @@
-Version 1.4.2<br>
+Version 0.0.2<br>
 <h1 align=center>T3A14-forloop.html</h1>
 
 Store this input variable into x:
 <input id="myText01" type=text value=3 ><br><br>
 
 <input type=button value="Show X" onclick="{
-
+x = document.getElementById('myText01').value
 let myTemp ='';
-for(let i=0; i<30; i++){
+for(let i=0; i<x; i++){
+   if(i>>2){
+      myTemp.style.color='blue';
+   }
+
 myTemp += 'Loop Number: ' + i + '<br>';
-}   
 
-document.getElementById('mySpan01').innerHTML = myTemp + myTemp + myTemp
-
-if (i=10){
-   document.getElementById('myTemp').style.color = 'red'
 }
+  
 
-//idk how to do the color change.
+document.getElementById('mySpan01').innerHTML = myTemp 
+
 
 
 }"><br><br>
