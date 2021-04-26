@@ -12,6 +12,8 @@ document.myYspeed = 50
 
 document.myXtimer = 0;
 document.myYtimer = 0;
+document.myZtimer = 0;
+document.myAtimer = 0;
 
 
 function myHitOther(my1,my2){
@@ -108,7 +110,9 @@ function myAAuto(){
 
 <input type=button value="↑" style="position: absolute; right: 1440;" onClick="{
     clearInterval(document.myXtimer) 
-    clearInterval(document.myYtimer)                   
+    clearInterval(document.myYtimer) 
+    clearInterval(document.myAtimer)
+    clearInterval(document.myZtimer)
     document.myYtimer = setInterval( myYAuto , document.myYspeed);
                         
 }"><br>
@@ -116,23 +120,29 @@ function myAAuto(){
 
 
 <input type=button value="←" onClick="{
-    clearInterval(document.myXtimer)     
-    clearInterval(document.myYtimer)                    
+    clearInterval(document.myXtimer) 
+    clearInterval(document.myYtimer) 
+    clearInterval(document.myAtimer)
+    clearInterval(document.myZtimer)                    
     document.myYtimer = setInterval( myZAuto , document.myYspeed);
                         
 }">
 
 <input type=button value="↓" onClick="{
-    clearInterval(document.myXtimer)    
-    clearInterval(document.myYtimer)                    
+    clearInterval(document.myXtimer) 
+    clearInterval(document.myYtimer) 
+    clearInterval(document.myAtimer)
+    clearInterval(document.myZtimer)                    
     document.myYtimer = setInterval( myAAuto , document.myYspeed);
                         
 }">
 
 
 <input type=button value="→" onClick="{
-       clearInterval(document.myXtimer) 
-       clearInterval(document.myYtimer)                      
+    clearInterval(document.myXtimer) 
+    clearInterval(document.myYtimer) 
+    clearInterval(document.myAtimer)
+    clearInterval(document.myZtimer)                      
        document.myXtimer = setInterval( myXAuto , document.myXspeed);
                         
 }">
