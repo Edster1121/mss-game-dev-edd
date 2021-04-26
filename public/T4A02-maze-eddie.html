@@ -1,0 +1,103 @@
+<script>
+function myHitOther(my1,my2){
+   left1   = parseInt(document.getElementById(my1).style.left)
+   right1  = left1 + parseInt(document.getElementById(my1).style.width)
+   top1    = parseInt(document.getElementById(my1).style.top)   
+   bottom1 = top1   + parseInt(document.getElementById(my1).style.height)
+   left2   = parseInt(document.getElementById(my2).style.left)
+   right2  = left2 + parseInt(document.getElementById(my2).style.width)
+   top2    = parseInt(document.getElementById(my2).style.top)   
+   bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
+   if ((right1  >=  left2  ) &&      	   
+       (bottom1 >=  top2   ) &&
+       (left1   <=  right2 ) &&
+       (top1    <=  bottom2) ){
+       return true
+   }
+}
+
+
+
+  document.myXpixels = 50
+  document.myYpixels = 20
+
+
+</script>
+
+<script> let mySound1 = new Audio ('Mario Hurting.mp3') </script>
+
+
+
+
+<h1 align=center><font color="white">T4A02-maze-Eddie.html</h1>
+
+<b>Get around the Goomba and grab the star!</b><br>
+
+<input type=button value="→" onClick="{
+   //alert( parseInt(document.getElementById('mySpan01').style.left) ) 
+                          
+document.getElementById('mySpan01').style.left = parseInt(document.getElementById('mySpan01').style.left) + document.myXpixels
+
+if(myHitOther('mySpan01', 'mySpan02')){
+   document.getElementById('mySpan01').style.left = 
+      parseInt(document.getElementById('mySpan01').style.left) - document.myXpixels
+   mySound1.play() 
+       
+}
+
+                        
+}">
+
+<input type=button value="←" onClick="{
+   document.getElementById('mySpan01').style.left = parseInt(document.getElementById('mySpan01').style.left) - document.myXpixels
+
+}">
+       
+
+<input type=button value="↓" onClick="{
+   document.getElementById('mySpan01').style.top = parseInt(document.getElementById('mySpan01').style.top) + document.myYpixels
+
+}">
+
+<input type=button value="↑" onClick="{
+   document.getElementById('mySpan01').style.top = parseInt(document.getElementById('mySpan01').style.top) - document.myYpixels  
+ 
+}">
+
+
+                   
+<span id="mySpan01" style="position:absolute; left:100; top:150; width:250; height:350"> 
+    <img src="https://i.pinimg.com/originals/b6/90/40/b69040ba12c1b3a9d9d998e3e67154e9.gif" width="250" height="350">
+</span><br>
+<span id="mySpan02" style="position:absolute; left:750; top:150; width:250; height:200"> 
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/Goomba.PNG/220px-Goomba.PNG" width="250" height="300"
+</span><br>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-image: url('https://vignette3.wikia.nocookie.net/supermariogalaxy/images/5/50/Wiki-background/revision/latest?cb=20150227215012');
+}
+</style>
+</head>
+<body>
+
+
+
+</body>
+</html>
+
+
+   
+
+
+
+
