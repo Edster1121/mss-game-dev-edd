@@ -1,6 +1,6 @@
 <script> let mySound1 = new Audio ('Munch.mp3') </script>
 <script> let mySound2 = new Audio ('You Win.mp3') </script>
-<script> let mySound3 = new Audio ('Game Over.mp3') </script>
+<script> let mySound3 = new Audio ('Game Over.wav') </script>
 
 <script>
 // Global variables works anywhere in your code
@@ -63,14 +63,7 @@ if (parseInt(document.getElementById('mySpan01').style.top) +75 > window.innerHe
     document.getElementById('mySpan02').style.left = '-400px'
   mySound1.play() 
   }
-
-  if(myHitOther('mySpan01', 'mySpan04')){
-    document.getElementById('mySpan04').style.left = '-400px'
-  mySound3.play() 
-   alert('You Lose!')
-   location = 'https://edster1121.github.io/mss-game-dev-edd/public/final-project-eddie/T4A01-game-level1-eddie.html'
-  }
-
+ 
 
   if(myHitOther('mySpan01', 'mySpan03')){
     document.getElementById('mySpan03').style.left = '-400px'
@@ -82,7 +75,24 @@ if (parseInt(document.getElementById('mySpan01').style.top) +75 > window.innerHe
 
   // your other checks go here
 
+
+  if(myHitOther('mySpan01', 'mySpan04')){
+    document.getElementById('mySpan01').style.left = '-400px'
+  mySound3.play() 
+   alert('You Lose!')
+   location = 'https://edster1121.github.io/mss-game-dev-edd/public/final-project-eddie/T4A01-game-level1-eddie.html'
+  }
+
+  if(myHitOther('mySpan01', 'mySpan05')){
+    document.getElementById('mySpan01').style.left = '-400px'
+  mySound3.play() 
+   alert('You Lose!')
+   location = 'https://edster1121.github.io/mss-game-dev-edd/public/final-project-eddie/T4A01-game-level1-eddie.html'
+  }
+
+
 }
+
 
 
 function myXAuto(){
@@ -214,18 +224,21 @@ if(document.myXmove==-5){
    <img src="https://i.pinimg.com/originals/22/78/d4/2278d4d19fbb92061a096ecac1350461.gif"
       width="100"
       height="100"
->
+></span><br>
 
-<span id="mySpan04" style="position:absolute; left:-500; top:500; width:45; height:30"> 
+
+<span id="mySpan04" style="position:absolute; left:650; top:500; width:200; height:200"> 
    <img src="https://i.imgur.com/KIrOWD9.png"
-      width="100"
-      height="100"
->
-</span><br>
+      width="200"
+      height="200"
+></span><br>
 
 
-</span><br>
-
+<span id="mySpan05" style="position:absolute; left:650; top:100; width:200; height:200"> 
+   <img src="https://i.imgur.com/KIrOWD9.png"
+      width="200"
+      height="200"
+></span><br>
 
 
 
