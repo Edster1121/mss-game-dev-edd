@@ -1,5 +1,6 @@
 <script> let mySound1 = new Audio ('Munch.mp3') </script>
 <script> let mySound2 = new Audio ('You Win.mp3') </script>
+<script> let mySound3 = new Audio ('Game Over.mp3') </script>
 
 <script>
 // Global variables works anywhere in your code
@@ -65,7 +66,9 @@ if (parseInt(document.getElementById('mySpan01').style.top) +75 > window.innerHe
 
   if(myHitOther('mySpan01', 'mySpan04')){
     document.getElementById('mySpan04').style.left = '-400px'
-  mySound1.play() 
+  mySound3.play() 
+   alert('You Lose!')
+   location = 'https://edster1121.github.io/mss-game-dev-edd/public/final-project-eddie/T4A01-game-level1-eddie.html'
   }
 
 
@@ -113,7 +116,7 @@ function myAAuto(){
 
 
 
-<h1 align=center>T4A01-game-level1-eddie.html</h1>
+<h1 align=center>T4A05-continuous-bounce-eddie.html</h1>
 
 
 
@@ -214,7 +217,7 @@ if(document.myXmove==-5){
 >
 
 <span id="mySpan04" style="position:absolute; left:-500; top:500; width:45; height:30"> 
-   <img src="https://i.pinimg.com/originals/22/78/d4/2278d4d19fbb92061a096ecac1350461.gif"
+   <img src="https://i.imgur.com/KIrOWD9.png"
       width="100"
       height="100"
 >
