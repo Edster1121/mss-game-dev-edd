@@ -1,3 +1,6 @@
+<html>
+<head>
+
 <script> let mySound1 = new Audio ('Munch.mp3') </script>
 <script> let mySound2 = new Audio ('You Win.mp3') </script>
 <script> let mySound3 = new Audio ('Game Over.mp3') </script>
@@ -11,8 +14,8 @@ document.myXmove = 5   // amount it moves in pixels
 document.myYmove = 5
 
 
-document.myXspeed = 50 // speed as a delay in milliseconds bigger is slower
-document.myYspeed = 50 
+document.myXspeed = 25 // speed as a delay in milliseconds bigger is slower
+document.myYspeed = 25
 
 
 document.myXtimer = 0;
@@ -20,8 +23,6 @@ document.myYtimer = 0;
 document.myZtimer = 0;
 document.myAtimer = 0;
 
-ranX1 = Math.floor(Math.random()*200) -10;
-ranY1 = Math.floor(Math.random()*15) -8
 
 
 function myHitOther(my1,my2){
@@ -44,6 +45,8 @@ function myHitOther(my1,my2){
 
 function myCheckAll(){
 
+mySound4.play('Background Theme.mp3')
+
 // Bounce of windoow walls
 
 if (parseInt(document.getElementById('mySpan01').style.left) < 10) {  // if we hit the left wall
@@ -58,45 +61,32 @@ if (parseInt(document.getElementById('mySpan01').style.top) < 100) {  // if we h
     document.myYmove = document.myYmove * -1   // then bounce
 }
 
-if (parseInt(document.getElementById('mySpan01').style.top) +75 > window.innerHeight) {  // if we hit the bottom wall
+if (parseInt(document.getElementById('mySpan01').style.top) +110 > window.innerHeight) {  // if we hit the bottom wall
     document.myYmove = document.myYmove * -1   // then bounce
 }
 
+if(parseInt(document.getElementById('myTextScore').value)  >=20  ){    //win at score 20 or higher
+    mySound4.pause('Background Theme.mp3') 
+    mySound2.play('You Win.mp3')   
+    alert('You Win!')
+    location = 'http://www.google.ca'
+  }
+
 // end of bounce code
 
+
+
   if(myHitOther('mySpan01', 'mySpan02')){
+   ranX1 = Math.floor(Math.random()*window.innerWidth*0.7);
+   ranY1 = Math.floor(Math.random()*window.innerHeight*0.75)+100; 
+   document.getElementById('myTextScore').value = parseInt(document.getElementById('myTextScore').value) + 1;
+
     document.getElementById('mySpan02').style.left = ranX1
+    document.getElementById('mySpan02').style.top = ranY1
     mySound1.play() 
   }
- 
+} 
 
-  if(myHitOther('mySpan01', 'mySpan03')){
-    document.getElementById('mySpan03').style.left = '-400px'
-  mySound1.play()   
-  mySound2.play()   
-    //alert('You Win!')
-    //location = 'https://google.ca'
-  }
-
-  // your other checks go here
-
-
-  if(myHitOther('mySpan01', 'mySpan04')){
-    document.getElementById('mySpan01').style.left = '-400px'
-  mySound3.play() 
-   alert('You Lose!')
-   location = 'https://edster1121.github.io/mss-game-dev-edd/public/final-project-eddie/T4A01-game-level1-eddie.html'
-  }
-
-  if(myHitOther('mySpan01', 'mySpan05')){
-    document.getElementById('mySpan01').style.left = '-400px'
-  mySound3.play() 
-   alert('You Lose!')
-   location = 'https://edster1121.github.io/mss-game-dev-edd/public/final-project-eddie/T4A01-game-level1-eddie.html'
-  }
-
-
-}
 
 
 
@@ -126,16 +116,134 @@ function myAAuto(){
 
 
 </script>
+</head>
+
+
+<body  onKeyDown="{
+     let myAlphaKey = event.key
+     document.getElementById('myDiv01').innerHTML = 'You typed: ' + myAlphaKey.toLowerCase()
+
+
+      if (myAlphaKey.toLowerCase() == 'arrowright') {
+    clearInterval(document.myXtimer) 
+    clearInterval(document.myYtimer) 
+    clearInterval(document.myAtimer)
+    clearInterval(document.myZtimer)                      
+       document.myXtimer = setInterval( myXAuto , document.myXspeed);
+if(document.myXmove==-5){
+   document.myXmove = document.myXmove * -1
+
+         myCheckAll()
+     }
+}
+
+      if (myAlphaKey.toLowerCase() == 'd') {
+    clearInterval(document.myXtimer) 
+    clearInterval(document.myYtimer) 
+    clearInterval(document.myAtimer)
+    clearInterval(document.myZtimer)                      
+       document.myXtimer = setInterval( myXAuto , document.myXspeed);
+if(document.myXmove==-5){
+   document.myXmove = document.myXmove * -1
+
+         myCheckAll()
+     }
+}
 
 
 
 
-<h1 align=center>T4A01-game-level1-eddie.html</h1>
+      if (myAlphaKey.toLowerCase() == 'arrowleft') {
+    clearInterval(document.myXtimer) 
+    clearInterval(document.myYtimer) 
+    clearInterval(document.myAtimer)
+    clearInterval(document.myZtimer)                      
+       document.myZtimer = setInterval( myZAuto , document.myYspeed);
+if(document.myXmove==-5){
+   document.myXmove = document.myXmove * -1
+
+         myCheckAll()
+     }
+}
+
+      if (myAlphaKey.toLowerCase() == 'a') {
+    clearInterval(document.myXtimer) 
+    clearInterval(document.myYtimer) 
+    clearInterval(document.myAtimer)
+    clearInterval(document.myZtimer)                      
+       document.myZtimer = setInterval( myZAuto , document.myYspeed);
+if(document.myXmove==-5){
+   document.myXmove = document.myXmove * -1
+
+         myCheckAll()
+     }
+}
 
 
-<body onload="mySound4.play()"></body>
+      if (myAlphaKey.toLowerCase() == 'arrowup') {
+    clearInterval(document.myXtimer) 
+    clearInterval(document.myYtimer) 
+    clearInterval(document.myAtimer)
+    clearInterval(document.myZtimer)                      
+       document.myYtimer = setInterval( myYAuto , document.myYspeed);
+if(document.myYmove==-5){
+   document.myYmove = document.myYmove * -1
+
+         myCheckAll()
+     }
+}
+
+      if (myAlphaKey.toLowerCase() == 'w') {
+    clearInterval(document.myXtimer) 
+    clearInterval(document.myYtimer) 
+    clearInterval(document.myAtimer)
+    clearInterval(document.myZtimer)                      
+       document.myYtimer = setInterval( myYAuto , document.myYspeed);
+if(document.myYmove==-5){
+   document.myYmove = document.myYmove * -1
+
+         myCheckAll()
+     }
+}
+
+      if (myAlphaKey.toLowerCase() == 'arrowdown') {
+    clearInterval(document.myXtimer) 
+    clearInterval(document.myYtimer) 
+    clearInterval(document.myAtimer)
+    clearInterval(document.myZtimer)                      
+       document.myAtimer = setInterval( myAAuto , document.myYspeed);
+if(document.myYmove==-5){
+   document.myYmove = document.myYmove * -1
+
+         myCheckAll()
+     }
+}
+
+
+
+      if (myAlphaKey.toLowerCase() == 's') {
+    clearInterval(document.myXtimer) 
+    clearInterval(document.myYtimer) 
+    clearInterval(document.myAtimer)
+    clearInterval(document.myZtimer)                      
+       document.myAtimer = setInterval( myAAuto , document.myYspeed);
+if(document.myYmove==-5){
+   document.myYmove = document.myYmove * -1
+
+         myCheckAll()
+     }
+}
+
+      
+}">
+
+
+<h1 align=center>game-level2-eddie.html</h1>
+
+<div id="myDiv01">...</div>
+
+
 <input type=button value="↑" style="position: absolute; left: 41;" onClick="{
-    mySound4.play('Background Theme.mp3')
     clearInterval(document.myXtimer) 
     clearInterval(document.myYtimer) 
     clearInterval(document.myAtimer)
@@ -187,27 +295,12 @@ if(document.myXmove==-5){
 }">
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <input type=button value="window width" onClick="{
   alert(window.innerWidth)
                         
 }">
+
+Score: <input id="myTextScore" type=text value=0 ><br>
 
 
 
@@ -218,7 +311,7 @@ if(document.myXmove==-5){
 >
 </span><br>
 
-<span id="mySpan02" style="position:absolute; left:300; top:150; width:50; height:50"> 
+<span id="mySpan02" style="position:absolute; left:300; top:150; width:50; height:70"> 
    <img src="https://i.pinimg.com/originals/22/78/d4/2278d4d19fbb92061a096ecac1350461.gif"
       width="100"
       height="100"
