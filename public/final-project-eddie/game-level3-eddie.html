@@ -1,5 +1,6 @@
 <html>
 <head>
+
 <font color="white">
 
 <script> let mySound1 = new Audio ('Munch.mp3') </script>
@@ -16,7 +17,9 @@ document.myHeight = 5
 
 document.myXmove = 5   // amount it moves in pixels
 document.myYmove = 5
-
+document.myZmove = 5
+document.myAmove = 10
+document.myBmove = 3
 
 document.myXspeed = 20 // speed as a delay in milliseconds bigger is slower
 document.myYspeed = 20
@@ -49,7 +52,7 @@ function myHitOther(my1,my2){
 
 function myCheckAll(){
 
-mySound4.play('Background Theme.mp3')
+mySound4.play('Background Theme 2.mp3')
 
 // Bounce of windoow walls
 
@@ -70,12 +73,31 @@ if (parseInt(document.getElementById('mySpan01').style.top) +110 > window.innerH
 }
 
 if (parseInt(document.getElementById('mySpan03').style.top) < 100) {  // if we hit the top wall
-    document.myYmove = document.myYmove * -1   // then bounce
+    document.myZmove = document.myZmove * -1   // then bounce
 }
 
 if (parseInt(document.getElementById('mySpan03').style.top) +110 > window.innerHeight) {  // if we hit the bottom wall
-    document.myYmove = document.myYmove * -1   // then bounce
+    document.myZmove = document.myZmove * -1   // then bounce
 }
+
+if (parseInt(document.getElementById('mySpan04').style.top) < 100) {  // if we hit the top wall
+    document.myAmove = document.myAmove * -1   // then bounce
+}
+
+if (parseInt(document.getElementById('mySpan04').style.top) +110 > window.innerHeight) {  // if we hit the bottom wall
+    document.myAmove = document.myAmove * -1   // then bounce
+}
+
+if (parseInt(document.getElementById('mySpan05').style.top) < 100) {  // if we hit the top wall
+    document.myBmove = document.myBmove * -1   // then bounce
+}
+
+if (parseInt(document.getElementById('mySpan05').style.top) +110 > window.innerHeight) {  // if we hit the bottom wall
+    document.myBmove = document.myBmove * -1   // then bounce
+}
+
+
+
 
 if(parseInt(document.getElementById('myTextScore').value)  >=20  ){    //win at score 20 or higher
     mySound4.pause('Background Theme.mp3') 
@@ -84,21 +106,22 @@ if(parseInt(document.getElementById('myTextScore').value)  >=20  ){    //win at 
     location = 'http://www.google.ca'
   }
 
+
+document.getElementById('mySpan03').style.top = parseInt(document.getElementById('mySpan03').style.top) + document.myZmove
+document.getElementById('mySpan04').style.top = parseInt(document.getElementById('mySpan04').style.top) + document.myAmove
+document.getElementById('mySpan05').style.top = parseInt(document.getElementById('mySpan05').style.top) + document.myBmove
+                                   
+
 // end of bounce code
 
 
 
 
   if(myHitOther('mySpan01', 'mySpan02')){
-   mySound1.play()
-   ranX1 = Math.floor(Math.random()*window.innerWidth*0.7);
-   ranY1 = Math.floor(Math.random()*window.innerHeight*0.75)+100; 
+   mySound1.play() 
    document.getElementById('myTextScore').value = parseInt(document.getElementById('myTextScore').value) + 1;
 
-    document.getElementById('mySpan02').style.left = ranX1
-    document.getElementById('mySpan02').style.top = ranY1
-    document.getElementById('mySpan01').style.width = 50 + myWidth
-    document.getElementById('mySpan01').style.height = 50 + myHeight
+    document.getElementById('mySpan02').style.left = 100
      
   }
   
@@ -109,13 +132,24 @@ if(parseInt(document.getElementById('myTextScore').value)  >=20  ){    //win at 
    location='https://edster1121.github.io/mss-game-dev-edd/public/final-project-eddie/game-level3-eddie.html'
   }
 
+  if(myHitOther('mySpan01', 'mySpan04')){
+   mySound4.pause()
+   mySound5.play()
+   alert('Ouch, thats gotta burn')
+   location='https://edster1121.github.io/mss-game-dev-edd/public/final-project-eddie/game-level3-eddie.html'
+  }
+
+  if(myHitOther('mySpan01', 'mySpan05')){
+   mySound4.pause()
+   mySound5.play()
+   alert('Ouch, thats gotta burn')
+   location='https://edster1121.github.io/mss-game-dev-edd/public/final-project-eddie/game-level3-eddie.html'
+  }
+
   if(myHitOther('mySpan02', 'mySpan03')){
-   ranX1 = Math.floor(Math.random()*window.innerWidth*0.7);
-   ranY1 = Math.floor(Math.random()*window.innerHeight*0.75)+100; 
    document.getElementById('myTextScore').value = parseInt(document.getElementById('myTextScore').value) + 1;
 
-    document.getElementById('mySpan02').style.left = ranX1
-    document.getElementById('mySpan02').style.top = ranY1
+    document.getElementById('mySpan02').style.left = 100
   }
  
 
@@ -130,7 +164,8 @@ if(parseInt(document.getElementById('myTextScore').value)  >=20  ){    //win at 
 
 
 function myXAuto(){
-  document.getElementById('mySpan01').style.left = parseInt(document.getElementById('mySpan01').style.left) + document.myXmove
+  document.getElementById('mySpan01').style.left = parseInt(document.getElementById('mySpan01').style.left) + document.myXmove 
+
   myCheckAll()
 }
 
@@ -350,7 +385,7 @@ Score: <input id="myTextScore" type=text value=0 ><br>
 >
 </span><br>
 
-<span id="mySpan02" style="position:absolute; left:300; top:150; width:50; height:70"> 
+<span id="mySpan02" style="position:absolute; left: 1200; top:350; width:50; height:70"> 
    <img src="Star.png"
       width="100"
       height="100"
@@ -358,6 +393,20 @@ Score: <input id="myTextScore" type=text value=0 ><br>
 </span><br>
 
 <span id="mySpan03" style="position:absolute; left:900; top:150; width:50; height:70;"> 
+   <img src="https://www.vmcdn.ca/f/files/localxpress/images/placeholders/fire.png;w=313"
+      width="100"
+      height="100"
+>
+</span><br>
+
+<span id="mySpan04" style="position:absolute; left:700; top:150; width:50; height:70;"> 
+   <img src="https://www.vmcdn.ca/f/files/localxpress/images/placeholders/fire.png;w=313"
+      width="100"
+      height="100"
+>
+</span><br>
+
+<span id="mySpan05" style="position:absolute; left:500; top:150; width:50; height:70;"> 
    <img src="https://www.vmcdn.ca/f/files/localxpress/images/placeholders/fire.png;w=313"
       width="100"
       height="100"
