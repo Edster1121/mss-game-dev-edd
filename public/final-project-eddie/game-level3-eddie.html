@@ -99,7 +99,8 @@ if (parseInt(document.getElementById('mySpan05').style.top) +110 > window.innerH
 
 
 
-if(parseInt(document.getElementById('myTextScore').value)  >=20  ){    //win at score 20 or higher
+if(parseInt(document.getElementById('myTextScore').value)  >=2  ){    //win at score 20 or higher
+   document.getElementById('mySpan01').style.left = -400
     mySound4.pause('Background Theme.mp3') 
     mySound2.play('You Win.mp3')   
     alert('You Win!')
@@ -126,6 +127,7 @@ document.getElementById('mySpan05').style.top = parseInt(document.getElementById
   }
   
   if(myHitOther('mySpan01', 'mySpan03')){
+   document.getElementById('mySpan01').style.left = -400
    mySound4.pause()
    mySound5.play()
    alert('Ouch, thats gotta burn')
@@ -133,6 +135,7 @@ document.getElementById('mySpan05').style.top = parseInt(document.getElementById
   }
 
   if(myHitOther('mySpan01', 'mySpan04')){
+   document.getElementById('mySpan01').style.left = -400
    mySound4.pause()
    mySound5.play()
    alert('Ouch, thats gotta burn')
@@ -140,6 +143,7 @@ document.getElementById('mySpan05').style.top = parseInt(document.getElementById
   }
 
   if(myHitOther('mySpan01', 'mySpan05')){
+   document.getElementById('mySpan01').style.left = -400
    mySound4.pause()
    mySound5.play()
    alert('Ouch, thats gotta burn')
@@ -312,7 +316,7 @@ if(document.myYmove==-5){
 }">
 
 
-<h1 align=center>game-level3-eddie.html</h1>
+<h1 align=center>Save the Star Without Burning!</h1>
 
 <div id="myDiv01">...</div>
 
