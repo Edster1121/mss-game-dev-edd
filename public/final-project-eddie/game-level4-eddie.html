@@ -143,10 +143,14 @@ document.getElementById('mySpan08').style.left = parseInt(document.getElementByI
 
 
   if(myHitOther('mySpan01', 'mySpan02')){
-   mySound1.play() 
+    ranX1 = Math.floor(Math.random()*window.innerWidth*0.7);
+   ranY1 = Math.floor(Math.random()*window.innerHeight*0.75)+100; 
    document.getElementById('myTextScore').value = parseInt(document.getElementById('myTextScore').value) + 1;
 
-    document.getElementById('mySpan02').style.left = 100
+    document.getElementById('mySpan02').style.left = ranX1
+    document.getElementById('mySpan02').style.top = ranY1
+    mySound1.play() 
+  
      
   }
   
@@ -491,5 +495,8 @@ body  {
 }
 </style>
 <body>
+
+
+
 
 
