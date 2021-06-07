@@ -1,0 +1,28 @@
+Game is Snake Level
+
+Other Game Ideas
+
+1. Scroller game with jumps and stuff
+
+
+Additional Game Functions For Snake Game
+
+1. Add WASD to the keys instead of buttons
+
+2. Add objects for the snake to bend in different ways
+
+3. Make the snake grow each time you eat
+
+4. Add more obstables
+
+5. Add moving obstacles 
+
+6. Add a jump function
+
+7. Background music
+
+8. Boss level
+
+9. Multiple levels
+
+10. Adding an original image https://www.piskelapp.com/
