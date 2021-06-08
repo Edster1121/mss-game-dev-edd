@@ -17,13 +17,18 @@ document.myHeight = 5
 
 document.myXmove = 8  // amount it moves in pixels
 document.myYmove = 8
-document.myZmove = 7  // asteroid 1
-document.myAmove = 10  // asteroid 2
-document.myBmove = 12 // asteroid 3
 
-document.myCmove = 10 // asteroid 4
-document.myDmove = 12 // asteroid 5
-document.myEmove = 7 // asteroid 6
+document.myZmove = 7  // blackhole 1
+document.myAmove = 10  // blackhole 2
+document.myBmove = 12 // blackhole 3
+document.myCmove = 7 // blackhole 4
+document.myDmove = 10 // blackhole 5
+document.myEmove = 12 // blackhole 6
+document.myFmove = 7 // blackhole 7
+document.myGmove = 10 // blackhole 8
+document.myHmove = 12 // blackhole 9
+document.myImove = 7 // blackhole 10
+
 
 
 
@@ -66,7 +71,7 @@ if (parseInt(document.getElementById('mySpan01').style.left) < 10) {  // if we h
     document.myXmove = document.myXmove * -1   // then bounce
 }
 
-if (parseInt(document.getElementById('mySpan01').style.left) + 110 > window.innerWidth) {  // if we hit the right wall
+if (parseInt(document.getElementById('mySpan01').style.left) + 120 > window.innerWidth) {  // if we hit the right wall
     document.myXmove = document.myXmove * -1   // then bounce
 }
 
@@ -82,15 +87,15 @@ if (parseInt(document.getElementById('mySpan03').style.top) < 100) {  // if we h
     document.myZmove = document.myZmove * -1   // then bounce
 }
 
-if (parseInt(document.getElementById('mySpan03').style.top) +110 > window.innerHeight) {  // if we hit the bottom wall
+if (parseInt(document.getElementById('mySpan03').style.top) +130 > window.innerHeight) {  // if we hit the bottom wall
     document.myZmove = document.myZmove * -1   // then bounce
 }
 
-if (parseInt(document.getElementById('mySpan04').style.top) < 100) {  // if we hit the top wall
+if (parseInt(document.getElementById('mySpan04').style.left) < 10) {  // if we hit the left wall
     document.myAmove = document.myAmove * -1   // then bounce
 }
 
-if (parseInt(document.getElementById('mySpan04').style.top) +110 > window.innerHeight) {  // if we hit the bottom wall
+if (parseInt(document.getElementById('mySpan04').style.left) + 120 > window.innerWidth) {  // if we hit the right wall
     document.myAmove = document.myAmove * -1   // then bounce
 }
 
@@ -98,15 +103,23 @@ if (parseInt(document.getElementById('mySpan05').style.top) < 100) {  // if we h
     document.myBmove = document.myBmove * -1   // then bounce
 }
 
-if (parseInt(document.getElementById('mySpan05').style.top) +120 > window.innerHeight) {  // if we hit the bottom wall
+if (parseInt(document.getElementById('mySpan05').style.top) +130 > window.innerHeight) {  // if we hit the bottom wall
     document.myBmove = document.myBmove * -1   // then bounce
 }
- 
-if (parseInt(document.getElementById('mySpan07').style.left) < 10) {  // if we hit the left wall
+
+if (parseInt(document.getElementById('mySpan06').style.left) < 10) {  // if we hit the left wall
+    document.myCmove = document.myCmove * -1   // then bounce
+}
+
+if (parseInt(document.getElementById('mySpan06').style.left) + 120 > window.innerWidth) {  // if we hit the right wall
+    document.myCmove = document.myCmove * -1   // then bounce
+}
+
+if (parseInt(document.getElementById('mySpan07').style.top) < 100) {  // if we hit the top wall
     document.myDmove = document.myDmove * -1   // then bounce
 }
 
-if (parseInt(document.getElementById('mySpan07').style.left) + 110 > window.innerWidth) {  // if we hit the right wall
+if (parseInt(document.getElementById('mySpan07').style.top) +130 > window.innerHeight) {  // if we hit the bottom wall
     document.myDmove = document.myDmove * -1   // then bounce
 }
 
@@ -114,19 +127,46 @@ if (parseInt(document.getElementById('mySpan08').style.left) < 10) {  // if we h
     document.myEmove = document.myEmove * -1   // then bounce
 }
 
-if (parseInt(document.getElementById('mySpan08').style.left) + 110 > window.innerWidth) {  // if we hit the right wall
+if (parseInt(document.getElementById('mySpan08').style.left) + 130 > window.innerWidth) {  // if we hit the right wall
     document.myEmove = document.myEmove * -1   // then bounce
 }
+
+if (parseInt(document.getElementById('mySpan09').style.top) < 100) {  // if we hit the top wall
+    document.myFmove = document.myFmove * -1   // then bounce
+}
+
+if (parseInt(document.getElementById('mySpan09').style.top) +130 > window.innerHeight) {  // if we hit the bottom wall
+    document.myFmove = document.myFmove * -1   // then bounce
+} 
+
+if (parseInt(document.getElementById('mySpan10').style.left) < 10) {  // if we hit the left wall
+    document.myGmove = document.myGmove * -1   // then bounce
+}
+
+if (parseInt(document.getElementById('mySpan10').style.left) + 130 > window.innerWidth) {  // if we hit the right wall
+    document.myGmove = document.myGmove * -1   // then bounce
+}
+
+if (parseInt(document.getElementById('mySpan11').style.top) < 100) {  // if we hit the top wall
+    document.myHmove = document.myHmove * -1   // then bounce
+}
+
+if (parseInt(document.getElementById('mySpan11').style.top) +130 > window.innerHeight) {  // if we hit the bottom wall
+    document.myHmove = document.myHmove * -1   // then bounce
+} 
+
 
 
 
 document.getElementById('mySpan03').style.top = parseInt(document.getElementById('mySpan03').style.top) + document.myZmove
-document.getElementById('mySpan04').style.top = parseInt(document.getElementById('mySpan04').style.top) + document.myAmove
+document.getElementById('mySpan04').style.left = parseInt(document.getElementById('mySpan04').style.left) + document.myAmove
 document.getElementById('mySpan05').style.top = parseInt(document.getElementById('mySpan05').style.top) + document.myBmove
-
-document.getElementById('mySpan07').style.left = parseInt(document.getElementById('mySpan07').style.left) - document.myDmove
-document.getElementById('mySpan08').style.left = parseInt(document.getElementById('mySpan08').style.left) - document.myEmove
-                                   
+document.getElementById('mySpan06').style.left = parseInt(document.getElementById('mySpan06').style.left) + document.myCmove
+document.getElementById('mySpan07').style.top = parseInt(document.getElementById('mySpan07').style.top) + document.myDmove
+document.getElementById('mySpan08').style.left = parseInt(document.getElementById('mySpan08').style.left) + document.myEmove
+document.getElementById('mySpan09').style.top = parseInt(document.getElementById('mySpan09').style.top) + document.myFmove                                   
+document.getElementById('mySpan10').style.left = parseInt(document.getElementById('mySpan10').style.left) + document.myGmove
+document.getElementById('mySpan11').style.top = parseInt(document.getElementById('mySpan11').style.top) + document.myHmove
 
 // end of bounce code
 
@@ -359,56 +399,6 @@ if(document.myYmove==-8){
 <div id="myDiv01">...</div>
 
 
-<input type=button value="↑" style="position: absolute; left: 41;" onClick="{
-    clearInterval(document.myXtimer) 
-    clearInterval(document.myYtimer) 
-    clearInterval(document.myAtimer)
-    clearInterval(document.myZtimer)
-    document.myYtimer = setInterval( myYAuto , document.myYspeed);
-if(document.myYmove==-8){
-   document.myYmove = document.myYmove * -1
-}
-                        
-}"><br>
-
-
-
-<input type=button value="←" onClick="{
-    clearInterval(document.myXtimer) 
-    clearInterval(document.myYtimer) 
-    clearInterval(document.myAtimer)
-    clearInterval(document.myZtimer)                    
-    document.myZtimer = setInterval( myZAuto , document.myYspeed);
-if(document.myXmove==-8){
-   document.myXmove = document.myXmove * -1
-}
-                        
-}">
-
-<input type=button value="↓" onClick="{
-    clearInterval(document.myXtimer) 
-    clearInterval(document.myYtimer) 
-    clearInterval(document.myAtimer)
-    clearInterval(document.myZtimer)                    
-    document.myAtimer = setInterval( myAAuto , document.myYspeed);
-if(document.myYmove==-8){
-   document.myYmove = document.myYmove * -1
-}
-                        
-}">
-
-
-<input type=button value="→" onClick="{
-    clearInterval(document.myXtimer) 
-    clearInterval(document.myYtimer) 
-    clearInterval(document.myAtimer)
-    clearInterval(document.myZtimer)                      
-       document.myXtimer = setInterval( myXAuto , document.myXspeed);
-if(document.myXmove==-8){
-   document.myXmove = document.myXmove * -1
-}
-                        
-}">
 
 
 
@@ -425,44 +415,74 @@ Score: <input id="myTextScore" type=text value=0 ><br>
 </span><br>
 
 <span id="mySpan02" style="position:absolute; left: 1200; top:350; width:50; height:70"> 
-   <img src="https://media2.giphy.com/media/JtNVJ9oT1wwP7XNnqH/giphy.gif"
+   <img src="https://media.tenor.com/images/0f9c6d9399a5cf2c4d7a1a7f1ccd462c/tenor.gif"
       width="100"
       height="100"
 >
 </span><br>
 
 <span id="mySpan03" style="position:absolute; left:300; top:150; width:50; height:70;"> 
-   <img src="http://assets.stickpng.com/images/5bd2034baacdfd0277498b02.png"
+   <img src="https://mario.wiki.gallery/images/5/59/SMG_Asset_Sprite_Black_Hole.png"
       width="100"
       height="100"
 >
 </span><br>
 
-<span id="mySpan04" style="position:absolute; left:600; top:150; width:50; height:70;"> 
-   <img src="http://assets.stickpng.com/images/5bd2034baacdfd0277498b02.png"
-      width="100"
-      height="100"
->
-</span><br>
-
-<span id="mySpan05" style="position:absolute; left:900; top:150; width:50; height:70;"> 
-   <img src="http://assets.stickpng.com/images/5bd2034baacdfd0277498b02.png"
+<span id="mySpan04" style="position:absolute; left:400; top:200; width:50; height:70;"> 
+   <img src="https://mario.wiki.gallery/images/5/59/SMG_Asset_Sprite_Black_Hole.png"
       width="100"
       height="100"
 >
 </span><br>
 
 
-<span id="mySpan07" style="position:absolute; left:450; top:300; width:50; height:70;"> 
-   <img src="http://assets.stickpng.com/images/5bd2034baacdfd0277498b02.png"
+<span id="mySpan05" style="position:absolute; left:500; top:250; width:50; height:70;"> 
+   <img src="https://mario.wiki.gallery/images/5/59/SMG_Asset_Sprite_Black_Hole.png"
+      width="100"
+      height="100"
+>
+</span><br>
+
+<span id="mySpan06" style="position:absolute; left:600; top:300; width:50; height:70;"> 
+   <img src="https://mario.wiki.gallery/images/5/59/SMG_Asset_Sprite_Black_Hole.png"
       width="100"
       height="100"
 >
 </span><br>
 
 
-<span id="mySpan08" style="position:absolute; left:750; top:600; width:50; height:70;"> 
-   <img src="http://assets.stickpng.com/images/5bd2034baacdfd0277498b02.png"
+<span id="mySpan07" style="position:absolute; left:700; top:350; width:50; height:70;"> 
+   <img src="https://mario.wiki.gallery/images/5/59/SMG_Asset_Sprite_Black_Hole.png"
+      width="100"
+      height="100"
+>
+</span><br>
+
+
+<span id="mySpan08" style="position:absolute; left:800; top:400; width:50; height:70;"> 
+   <img src="https://mario.wiki.gallery/images/5/59/SMG_Asset_Sprite_Black_Hole.png"
+      width="100"
+      height="100"
+>
+</span><br>
+
+
+<span id="mySpan09" style="position:absolute; left:900; top:450; width:50; height:70;"> 
+   <img src="https://mario.wiki.gallery/images/5/59/SMG_Asset_Sprite_Black_Hole.png"
+      width="100"
+      height="100"
+>
+</span><br>
+
+<span id="mySpan10" style="position:absolute; left:1000; top:500; width:50; height:70;"> 
+   <img src="https://mario.wiki.gallery/images/5/59/SMG_Asset_Sprite_Black_Hole.png"
+      width="100"
+      height="100"
+>
+</span><br>
+
+<span id="mySpan11" style="position:absolute; left:1100; top:550; width:50; height:70;"> 
+   <img src="https://mario.wiki.gallery/images/5/59/SMG_Asset_Sprite_Black_Hole.png"
       width="100"
       height="100"
 >
@@ -476,9 +496,8 @@ Score: <input id="myTextScore" type=text value=0 ><br>
 
 <style>
 body  {
-  background-image: url("https://www.leoscamera.com/images/cached/BD_Backgrounds_117_Pastel_Pink_Background_Paper_27_2000x2000_f82ca28c74c0fb655a83e6eeb35fba.jpg");
-  height: window.innerwidth;
-  width: window.innerheight;
+  background-image: url("https://i.pinimg.com/originals/38/8f/a8/388fa8aaa7761452806d777decc645d5.jpg");
+  background-repeat:no-repeat;
 
 }
 </style>
