@@ -121,9 +121,11 @@ if (parseInt(document.getElementById('mySpan08').style.left) + 110 > window.inne
 
 
 if(parseInt(document.getElementById('myTextScore').value)  >=5  ){    //win at score 5 or higher
+   document.getElementById('myTextScore').value = 0
    document.getElementById('mySpan01').style.left = -400
     mySound4.pause('Background Theme.mp3') 
-    mySound2.play('You Win.mp3')   
+    mySound2.play('You Win.mp3') 
+    alert ('You Win!')  
     location = 'https://edster1121.github.io/mss-game-dev-edd/public/final-project-eddie/game-level5-eddie.html'
   }
 
