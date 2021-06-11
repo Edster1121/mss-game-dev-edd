@@ -1,3 +1,6 @@
+<html>
+<head>
+
 <script> let mySound1 = new Audio ('Munch.mp3') </script>
 <script> let mySound2 = new Audio ('You Win.mp3') </script>
 <script> let mySound3 = new Audio ('Game Over.mp3') </script>
@@ -121,6 +124,126 @@ function myAAuto(){
 
 
 </script>
+</head>
+
+<body  onKeyDown="{
+     let myAlphaKey = event.key
+     document.getElementById('myDiv01').innerHTML = 'You typed: ' + myAlphaKey.toLowerCase()
+
+
+      if (myAlphaKey.toLowerCase() == 'arrowright') {
+    clearInterval(document.myXtimer) 
+    clearInterval(document.myYtimer) 
+    clearInterval(document.myAtimer)
+    clearInterval(document.myZtimer)                      
+       document.myXtimer = setInterval( myXAuto , document.myXspeed);
+if(document.myXmove==-5){
+   document.myXmove = document.myXmove * -1
+
+         myCheckAll()
+     }
+}
+
+      if (myAlphaKey.toLowerCase() == 'd') {
+    clearInterval(document.myXtimer) 
+    clearInterval(document.myYtimer) 
+    clearInterval(document.myAtimer)
+    clearInterval(document.myZtimer)                      
+       document.myXtimer = setInterval( myXAuto , document.myXspeed);
+if(document.myXmove==-5){
+   document.myXmove = document.myXmove * -1
+
+         myCheckAll()
+     }
+}
+
+
+
+
+      if (myAlphaKey.toLowerCase() == 'arrowleft') {
+    clearInterval(document.myXtimer) 
+    clearInterval(document.myYtimer) 
+    clearInterval(document.myAtimer)
+    clearInterval(document.myZtimer)                      
+       document.myZtimer = setInterval( myZAuto , document.myYspeed);
+if(document.myXmove==-5){
+   document.myXmove = document.myXmove * -1
+
+         myCheckAll()
+     }
+}
+
+      if (myAlphaKey.toLowerCase() == 'a') {
+    clearInterval(document.myXtimer) 
+    clearInterval(document.myYtimer) 
+    clearInterval(document.myAtimer)
+    clearInterval(document.myZtimer)                      
+       document.myZtimer = setInterval( myZAuto , document.myYspeed);
+if(document.myXmove==-5){
+   document.myXmove = document.myXmove * -1
+
+         myCheckAll()
+     }
+}
+
+
+      if (myAlphaKey.toLowerCase() == 'arrowup') {
+    clearInterval(document.myXtimer) 
+    clearInterval(document.myYtimer) 
+    clearInterval(document.myAtimer)
+    clearInterval(document.myZtimer)                      
+       document.myYtimer = setInterval( myYAuto , document.myYspeed);
+if(document.myYmove==-5){
+   document.myYmove = document.myYmove * -1
+
+         myCheckAll()
+     }
+}
+
+      if (myAlphaKey.toLowerCase() == 'w') {
+    clearInterval(document.myXtimer) 
+    clearInterval(document.myYtimer) 
+    clearInterval(document.myAtimer)
+    clearInterval(document.myZtimer)                      
+       document.myYtimer = setInterval( myYAuto , document.myYspeed);
+if(document.myYmove==-5){
+   document.myYmove = document.myYmove * -1
+
+         myCheckAll()
+     }
+}
+
+      if (myAlphaKey.toLowerCase() == 'arrowdown') {
+    clearInterval(document.myXtimer) 
+    clearInterval(document.myYtimer) 
+    clearInterval(document.myAtimer)
+    clearInterval(document.myZtimer)                      
+       document.myAtimer = setInterval( myAAuto , document.myYspeed);
+if(document.myYmove==-5){
+   document.myYmove = document.myYmove * -1
+
+         myCheckAll()
+     }
+}
+
+
+
+      if (myAlphaKey.toLowerCase() == 's') {
+    clearInterval(document.myXtimer) 
+    clearInterval(document.myYtimer) 
+    clearInterval(document.myAtimer)
+    clearInterval(document.myZtimer)                      
+       document.myAtimer = setInterval( myAAuto , document.myYspeed);
+if(document.myYmove==-5){
+   document.myYmove = document.myYmove * -1
+
+         myCheckAll()
+     }
+}
+
+      
+}">
+
 
 
 
@@ -128,7 +251,7 @@ function myAAuto(){
 
 <h1 align=center>Eat the Bunnies and Avoid the Spikeballs!</h1>
 
-
+<div id="myDiv01">...</div>
 
 <input type=button value="↑" style="position: absolute; left: 41;" onClick="{
     clearInterval(document.myXtimer) 
